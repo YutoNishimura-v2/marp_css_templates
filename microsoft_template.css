@@ -1,16 +1,19 @@
 /* @theme microsoft_template */
 
 @import 'default';
-
 section {
     justify-content: start;
     background-color: white;
     font-family: 'Yu Gothic UI';
     color: black;
 }
-section > h1, h2, h3, h4, h5, header, footer{
-    color: black;
-}
+section > h1{color: black;}
+section > h2{color: black;}
+section > h3{color: black;}
+section > h4{color: black;}
+section > h5{color: black;}
+section > header{color: black;}
+section > footer{color: black;}
 
 section.title {
     justify-content: center;
@@ -18,14 +21,29 @@ section.title {
     font-family: 'Yu Gothic UI';
     color: white;
 }
-section.title > h1, h2, h3, h4, h5, header, footer{
-    color: white;
-}
+section.title > h1{color: white;}
+section.title > h2{color: white;}
+section.title > h3{color: white;}
+section.title > h4{color: white;}
+section.title > h5{color: white;}
+section.title > header{color: white;}
+section.title > footer{color: white;}
 
 section.blue {
     background-color: #0078D7;
     color: white;
 }
-section.blue > h1, h2, h3, h4, h5, header, footer{
-    color: white;
-}
+section.blue > h1{color: white;}
+section.blue > h2{color: white;}
+section.blue > h3{color: white;}
+section.blue > h4{color: white;}
+section.blue > h5{color: white;}
+section.blue > header{color: white;}
+section.blue > footer{color: white;}
+
+/* 
+元の書き方: section.blue > header, footerだと，headerに関しては指定できていた(子要素扱い)が，
+footerまでは及んでいなかった．つまり，全体に対して適用されてしまっていた．
+これの賢い書き方はないので，愚直にたくさん書くか，「scss」とやらで書く必要がある．
+今回は，そこまで凝る必要もないので，愚直に指定する． 
+*/
